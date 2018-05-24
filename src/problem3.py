@@ -96,6 +96,8 @@ def problem3(point, circle1, circle2, window):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
+    window = rg.window
+    circle1 = rg.Circle
 
 
 # -----------------------------------------------------------------------------

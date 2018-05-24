@@ -29,6 +29,9 @@ def main():
     #     -- Call each method that you implement below.
     # -------------------------------------------------------------------------
 
+    pig1 = Pig(50)
+    heavier_pig = Pig(150)
+    other_pig = Pig(200)
 
 class Pig(object):
     def __init__(self, weight):
@@ -36,11 +39,14 @@ class Pig(object):
         What comes in:  The Pig's weight (in pounds).
         Side effects: Sets instance variables as needed by the other methods.
         """
-        # TODO: Implement and test this method.
+        # DO: Implement and test this method
+        self.weight = weight
 
     def get_weight(self):
         """ Returns this Pig's weight. """
         # TODO: Implement and test this method.
+
+        return self.weight
 
     def eat(self, pounds_of_slop):
         """

@@ -19,7 +19,7 @@ def main():
     print()
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
-    # run_test_problem2a()
+    run_test_problem2a()
     # run_test_problem2b()
     # run_test_problem2c()
 
@@ -174,6 +174,9 @@ def problem2a(x, sequence):
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
+    for k in range(len(sequence)):
+        if sequence[k] > x:
+            return [k]
 
 def run_test_problem2b():
     """ Tests the  problem2b   function. """
