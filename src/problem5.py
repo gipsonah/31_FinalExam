@@ -2,7 +2,7 @@
 Final exam, problem 5.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.  May 2018.
+         their colleagues and Alex Gipson.  May 2018.
 
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
@@ -139,6 +139,13 @@ def problem5(m, numbers1, numbers2):
     # TODO: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    list1 = []
+    for k in range(len(numbers1)):
+        if numbers1[k] == numbers2[k] * m:
+            list1 = list1 + [numbers1[k], numbers2[k]]
+    return list1
+
+        # for some of the test the numbers are flip flopped and I don't know how to resolve that issue
 
 
 ###############################################################################

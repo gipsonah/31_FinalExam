@@ -96,8 +96,34 @@ def problem3(point, circle1, circle2, window):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
-    window = rg.window
-    circle1 = rg.Circle
+    point.attach_to(window)
+    circle1.attach_to(window)
+    circle2.attach_to(window)
+    line1 = rg.Line(point, circle1.center)
+    line1.attach_to(window)
+    line2 = rg.Line(circle1.center, circle2.center)
+    line2.attach_to(window)
+    line3 = rg.Line(circle1.center, point)
+    line3.attach_to(window)
+    midline1x = (point.x+circle1.center.x)/2
+    midline1y = (point.y+circle1.center.y)/2
+    midline2x = (circle2.center.x + circle1.center.x) / 2
+    midline2y = (circle2.center.y + circle1.center.y) / 2
+    midline3x = (point.x + circle1.center.x) / 2
+    midline3y = (point.y + circle1.center.y) / 2
+    midline2x = (circle2.center.x + circle1.center.x) / 2
+    midline2y = (circle2.center.y + circle1.center.y) / 2
+    line4 = rg.Line(rg.Point(midline1x, midline1y), rg.Point(midline2x, midline2y))
+    line4.attach_to(window)
+    line5 = rg.Line(rg.Point(midline2x, midline2y), rg.Point(midline3x, midline3y))
+    line5.attach_to(window)
+    line6 = rg.Line(rg.Point(midline1x,midline1y), rg.Point(midline3x,midline3y))
+    line6.attach_to(window)
+
+    window.render()
+
+
+
 
 
 # -----------------------------------------------------------------------------

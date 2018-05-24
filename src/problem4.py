@@ -29,9 +29,11 @@ def main():
     #     -- Call each method that you implement below.
     # -------------------------------------------------------------------------
 
-    pig1 = Pig(50)
-    heavier_pig = Pig(150)
-    other_pig = Pig(200)
+    pig1 = Pig(1)
+    pig1.get_weight()
+    pig1.eat(pounds_of_slop=0)
+    pig1.eat_for_a_year()
+
 
 class Pig(object):
     def __init__(self, weight):
@@ -44,15 +46,17 @@ class Pig(object):
 
     def get_weight(self):
         """ Returns this Pig's weight. """
-        # TODO: Implement and test this method.
-
+        # DO: Implement and test this method.
+        print(self.weight)
         return self.weight
 
     def eat(self, pounds_of_slop):
         """
         Increments this Pig's weight by the given pounds_of_slop.
         """
-        # TODO: Implement and test this method.
+        # DO: Implement and test this method.
+        self.weight = self.weight + pounds_of_slop
+        return self.weight
 
     def eat_for_a_year(self):
         """
@@ -64,21 +68,32 @@ class Pig(object):
           -- eat 364 pounds of slop, then
           -- eat 365 pounds of slop.
         """
-        # TODO: Implement and test this method.
+        # DO: Implement and test this method.
+        year = 365
+        for k in range(year):
+            pounds_of_slop = k+1
+            self.eat(pounds_of_slop)
 
     def heavier_pig(self, other_pig):
         """
         Returns either this Pig object or the other given Pig object,
         whichever is heavier.
         """
-        # TODO: Implement and test this method.
+        # DO: Implement and test this method.
+        if other_pig.weight > self.weight:
+            return other_pig
+        else:
+            return self
 
     def new_pig(self, other_pig):
         """
         Returns a new Pig whose weight is the weight of the heavier
           of this Pig and the other_Pig.
         """
-        # TODO: Implement and test this method.
+        # DO: Implement and test this method.
+        pig = self.heavier_pig(other_pig)
+        new_pig = Pig(pig.get_weight())
+        return new_pig
 
 
 # -----------------------------------------------------------------------------
